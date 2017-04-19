@@ -31,10 +31,10 @@ public class ReceiverBean {
     
     /*
      * It is possible to define the factory as variable or through annotation
-     * (Es posible definir la factoría como variable o atraves  anotación)
+     * (Es posible definir la factoría como el variable o bien atraves  anotación)
      */
 //  @Resource(lookup = "java:/jms/factoriaConexiones")
-//  private static ConnectionFactory connectionFactory;
+//  private ConnectionFactory connectionFactory;
     
     @Inject
     @JMSConnectionFactory("java:/jms/factoriaConexiones")
