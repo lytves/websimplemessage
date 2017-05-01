@@ -10,7 +10,9 @@ Web applications can use using managed beans to send messages and to receive mes
 
 It uses sending and receiving Facelets pages as well as corresponding backing beans. When a user enters a message in the text field of the sending page and clicks a button, the backing bean for the page sends the message to a queue and displays it on the page. When the user goes to the receiving page and clicks another button, the backing bean for that page receives the message synchronously and displays it
 
-![The websimplemessage Application](https://docs.oracle.com/javaee/7/tutorial/img/jeett_dt_035.png)
+<p align="center">
+    <img src="https://docs.oracle.com/javaee/7/tutorial/img/jeett_dt_035.png">
+</p>
 
 1. To activate the message flow in a aplication server WildFly it is necessary to start a full instance of the application server with the following command:
    ><HOME_WILDFLY/bin>$ ./standalone.sh -c standalone-full.xml
@@ -20,3 +22,6 @@ It uses sending and receiving Facelets pages as well as corresponding backing be
    For a correct execution it is necessary to create a new Connection Factory with name **"java:/jms/factoriaConexiones"** and connector type "in-vm" in your aplication server from the administration console.
 
    For a correct execution it is necessary to create a new target queue **"java:/jms/queue/exampleQueue"** in your aplication server from the administration console.
+
+3. Deploy your aplication on a aplication server and in a web browser enter the following URL:
+http://localhost:8080/websimplemessage
